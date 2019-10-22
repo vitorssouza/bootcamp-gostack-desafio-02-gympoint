@@ -1,0 +1,13 @@
+version: '3.7'
+
+volumes:
+  data:
+
+services:
+  postgresql:
+    restart: always
+    image: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
